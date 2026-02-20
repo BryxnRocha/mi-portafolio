@@ -55,7 +55,7 @@ body {
     color: var(--accent);
 }
 
-/* ================= introduccion ================= */
+/* ================= INTRODUCCION ================= */
 .intro {
     height: 90vh;
     display: flex;
@@ -183,4 +183,23 @@ footer {
     .intro h1 {
         font-size: 2.2rem;
     }
+}
+
+/* ================= ANIMACIONES SCROLL ================= */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación Navbar al scrollear */
+.scrolled {
+    background-color: #0f172a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }

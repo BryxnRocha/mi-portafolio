@@ -132,10 +132,45 @@ section h2 {
 /* ================= CARDS ================= */
 .skill-card,
 .project-card {
-    background-color: var(--bg-secondary);
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(56, 189, 248, 0.2);
     padding: 25px;
-    border-radius: 10px;
-    transition: 0.3s ease;
+    border-radius: 14px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+.skill-card::before,
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        transparent,
+        rgba(56, 189, 248, 0.15),
+        transparent
+    );
+    transform: rotate(25deg);
+    transition: 0.6s;
+}
+
+.skill-card:hover::before,
+.project-card:hover::before {
+    top: -20%;
+    left: -20%;
 }
 
 .skill-card:hover,
@@ -202,4 +237,15 @@ footer {
 .scrolled {
     background-color: #0f172a;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+#typing::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
 }

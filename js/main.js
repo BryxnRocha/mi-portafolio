@@ -1,4 +1,4 @@
-// ================= SCROLL SUAVE =================
+// ================= SCROLL =================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ================= ANIMACIÓN AL HACER SCROLL =================
+// ================= ANIMACION SCROLL =================
 const hiddenElements = document.querySelectorAll('.hidden');
 
 const observer = new IntersectionObserver(entries => {
@@ -23,7 +23,7 @@ const observer = new IntersectionObserver(entries => {
 hiddenElements.forEach(el => observer.observe(el));
 
 
-// ================= NAVBAR EFECTO SCROLL =================
+// ================= NAVBAR EFECTO =================
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -33,3 +33,43 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
+
+// ================= TYPING  =================
+
+const typingElement = document.getElementById("typing");
+
+const roles = [
+    "Full Stack Developer",
+    "QA Automation Engineer",
+    "Cybersecurity Enthusiast"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    const currentRole = roles[roleIndex];
+
+    if (!isDeleting) {
+        typingElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentRole.length) {
+            setTimeout(() => isDeleting = true, 1200);
+        }
+    } else {
+        typingElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+    }
+
+    const speed = isDeleting ? 50 : 90;
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();

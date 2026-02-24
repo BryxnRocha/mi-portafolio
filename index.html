@@ -10,6 +10,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -19,26 +20,37 @@
         <nav class="navbar">
             <div class="logo">Bryan Rocha</div>
             <ul class="nav-links">
-                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#mi-informacion">Sobre mí</a></li>
                 <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#projects">Proyectos</a></li> <!-- corregido -->
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- ================= INTRODUCCION ================= -->
     <section class="intro">
+        <div id="particles-js"></div>
         <div class="intro-content">
             <h1>Ingeniero en Informática</h1>
             <h2><span id="typing"></span></h2>
             <p>
                 Desarrollo soluciones web seguras, escalables y orientadas a resultados.
             </p>
-
             <div class="intro-buttons">
                 <a href="#projects" class="btn primary">Ver Proyectos</a>
-                <a href="#contact" class="btn secondary">Contactar</a>
+                <a href="#contacto" class="btn secondary">Contactar</a>
+                <div class="social-links">
+                    <a href="https://github.com/BryxnRocha" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bryan-rocha-024688399/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/bryxn_rzz" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -155,6 +167,66 @@
         </div>
     </section>
 
+    <!-- ================= EDUCACION ================= -->
+    <section id="educacion" class="educacion hidden">
+        <div class="container">
+            <h2>Educación</h2>
+
+            <div class="educacion-card">
+                <h3>Ingeniería en Informática</h3>
+                <p>Duoc UC | 2021 – 2025</p>
+                <p>
+                    Formación en desarrollo Full Stack, arquitectura de software,
+                    bases de datos, calidad y seguridad informática.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CERTIFICACIONES ================= -->
+    <section id="certificaciones" class="certificaciones hidden">
+        <div class="cert-modules">
+            <h3>Certificaciones Modulares</h3>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-icon">📊</div>
+                    <h4>Inteligencia de Negocios</h4>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">🗄️</div>
+                    <h4>Análisis y Desarrollo de Modelos de Datos</h4>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">💻</div>
+                    <h4>Programación de Software</h4>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">🧪</div>
+                    <h4>Calidad de Software</h4>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">🏗️</div>
+                    <h4>Arquitectura de Software</h4>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">📈</div>
+                    <h4>Gestión de Proyectos Informáticos</h4>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">📝</div>
+                    <h4>Análisis y Planificación de Requerimientos</h4>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">🌎</div>
+                    <h4>Inglés Intermedio Alto</h4>
+                </div>
+            </div>
+            <a href="assets/certificaciones/modulos-duoc.pdf" target="_blank" class="cert-button">
+                Ver Certificado Completo →
+            </a>
+        </div>
+    </section>
+
     <!-- ================= CONTACTO ================= -->
     <section id="contacto" class="contacto hidden">
         <div class="container">
@@ -166,7 +238,6 @@
                 <textarea placeholder="Tu mensaje" required></textarea>
                 <button type="submit" class="btn primary">Enviar</button>
             </form>
-
         </div>
     </section>
 
@@ -175,7 +246,10 @@
         <p>© 2025 Bryan Rocha | Santiago, Chile</p>
     </footer>
 
-    <!-- JS -->
+    <!-- Librería partículas -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <!-- JS principal -->
     <script src="js/main.js"></script>
 
 </body>

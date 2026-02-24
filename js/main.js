@@ -73,3 +73,30 @@ function typeEffect() {
 }
 
 typeEffect();
+
+// ================= PARTICLES HERO =================
+
+tsParticles.load("particles-js", {
+    fullScreen: { enable: false },
+    background: { color: "transparent" },
+    particles: {
+        number: { value: 70 },
+        color: { value: "#38bdf8" },
+        links: {
+            enable: true,
+            color: "#38bdf8",
+            distance: 140,
+            opacity: 0.3
+        },
+        move: {
+            enable: true,
+            speed: 1
+        },
+        size: {
+            value: 2
+        },
+        opacity: {
+            value: 0.5
+        }
+    }
+});
